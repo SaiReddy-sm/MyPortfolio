@@ -10,9 +10,9 @@ I am a Computer Science Engineering student specializing in Artificial Intellige
 
 Visit my portfolio:
 
-[Portfolio Website](#)
+[Portfolio Website](https://saireddy-sm.github.io/MyPortfolio/)
 
-https://saireddy-sm.github.io/MyPortfolio/
+
 
 ## 🛠️ Technologies Used
 
