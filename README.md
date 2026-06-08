@@ -12,9 +12,7 @@ Visit my portfolio:
 
 [Portfolio Website](#)
 
-*(Update this link after deployment.)*
-
----
+https://saireddy-sm.github.io/MyPortfolio/
 
 ## 🛠️ Technologies Used
 
@@ -105,17 +103,6 @@ Kallam Haranadhareddy Institute of Technology
 
 ---
 
-## 🚀 Getting Started
-
-Clone the repository:
-
-```bash
-git clone https://github.com/YOUR_USERNAME/MyPortfolio.git
-```
-
-Open `index.html` in your browser to view the portfolio locally.
-
----
 
 ## 📄 License
 
