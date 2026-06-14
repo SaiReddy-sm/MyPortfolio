@@ -39,16 +39,6 @@ body{
   background:#0a0f1f;
 }
 
-'''body{
-  color:var(--ink);
-  overflow-x:hidden;
-  background:
-    radial-gradient(circle at 10% 8%,rgba(37,99,235,.16),transparent 24%),
-    radial-gradient(circle at 92% 12%,rgba(245,180,0,.18),transparent 24%),
-    radial-gradient(circle at 50% 100%,rgba(248,113,113,.10),transparent 26%),
-    linear-gradient(135deg,#0f172a 0%,#1e293b 18%,#f5f7fb 48%,#eef4ff 72%,#111827 100%);
-}'''
-
 body::before{
   content:"";
   position:fixed;
@@ -278,7 +268,6 @@ section{padding:105px 7%;}
   display:flex;
   align-items:center;
   gap:9px;
-  #background:rgba(255,255,255,255);
   background:#000000;
   color:#e5e7eb;
   border:1px solid rgba(255,255,255,.11);
@@ -335,7 +324,6 @@ section{padding:105px 7%;}
   height:100%;
   border-radius:24px;
   border:8px solid white;
- 
   position:relative;
   overflow:hidden;
 }
@@ -346,7 +334,6 @@ section{padding:105px 7%;}
   border-radius:24px;
   display:block;
 }
-
 .profile-image::before{
   content:"";
   position:absolute;
@@ -357,8 +344,6 @@ section{padding:105px 7%;}
   content:"";
   display:none;
 }
-
-
 
 .float-chip{
   position:absolute;
@@ -377,34 +362,15 @@ section{padding:105px 7%;}
 }
 .float-chip i{color:white;}
 
-.float-chip.python{
-  background:linear-gradient(135deg,#3776AB,#1e293b);
-  color:#fff;
-}
+.float-chip.python{background:linear-gradient(135deg,#3776AB,#1e293b);color:#fff;}
 .float-chip.python i{color:#ffd43b;}
-
-.float-chip.ai{
-  background:linear-gradient(135deg,#7c3aed,#111827);
-  color:#fff;
-}
+.float-chip.ai{background:linear-gradient(135deg,#7c3aed,#111827);color:#fff;}
 .float-chip.ai i{color:#c4b5fd;}
-
-.float-chip.web{
-  background:linear-gradient(135deg,#0ea5e9,#111827);
-  color:#fff;
-}
+.float-chip.web{background:linear-gradient(135deg,#0ea5e9,#111827);color:#fff;}
 .float-chip.web i{color:#bae6fd;}
-
-.float-chip.java{
-  background:linear-gradient(135deg,#dc2626,#111827);
-  color:#fff;
-}
+.float-chip.java{background:linear-gradient(135deg,#dc2626,#111827);color:#fff;}
 .float-chip.java i{color:#fecaca;}
-
-.float-chip.git{
-  background:linear-gradient(135deg,#f97316,#111827);
-  color:#fff;
-}
+.float-chip.git{background:linear-gradient(135deg,#f97316,#111827);color:#fff;}
 .float-chip.git i{color:#ffedd5;}
 .float-chip.ai{top:54px;right:-8px;}
 .float-chip.python{top:132px;left:-14px;animation-delay:.5s;}
@@ -441,7 +407,6 @@ section{padding:105px 7%;}
   color:#ffffff;
   max-width:850px;
   text-shadow:0 2px 12px rgba(255,255,255,.35);
-  max-width:850px;
 }
 .section-line{
   flex:1;
@@ -537,7 +502,7 @@ section{padding:105px 7%;}
 .project-card:hover::before,
 .edu-card:hover::before,
 .timeline-card:hover::before{opacity:1;}
-.card>* , .focus-card>* , .skill-card>* , .project-card>* , .edu-card>* , .timeline-card>*{position:relative;z-index:2;}
+.card>*,.focus-card>*,.skill-card>*,.project-card>*,.edu-card>*,.timeline-card>*{position:relative;z-index:2;}
 
 .focus-grid{display:grid;gap:18px;}
 .focus-card{
@@ -606,7 +571,6 @@ section{padding:105px 7%;}
   gap:22px;
 }
 .skill-card,
-
 .edu-card,
 .timeline-card{
   padding:26px;
@@ -617,9 +581,43 @@ section{padding:105px 7%;}
   padding:26px;
   border-radius:26px;
   transition:.35s;
-  min-height:320px;      /* Same height for all project cards */
+  min-height:320px;
   display:flex;
   flex-direction:column;
+}
+
+.project-card .view-btn {
+  display: inline-block;
+  margin-top: auto;
+  padding: 10px 22px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: .85rem;
+  color: #fff;
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .3s;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, .3);
+  align-self: flex-start;
+}
+.project-card .view-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(99, 58, 237, .45);
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+}
+
+.project-points {
+  padding-left: 18px;
+  margin: 10px 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.project-points li {
+  color: #cbd5e1;
+  line-height: 1.65;
+  font-size: .92rem;
 }
 
 .skill-bar{
@@ -701,14 +699,8 @@ section{padding:105px 7%;}
   background:linear-gradient(135deg,var(--blue),var(--red));
 }
 .cert-card span{font-size:.78rem;font-weight:900;color:var(--blue);}
-.cert-card h3{
-  margin:9px 0;
-  color:#f8fafc;
-}
-.cert-card p{
-  color:#cbd5e1;
-  line-height:1.65;
-}
+.cert-card h3{margin:9px 0;color:#f8fafc;}
+.cert-card p{color:#cbd5e1;line-height:1.65;}
 @keyframes slide{to{transform:translateX(-50%);}}
 
 .contact-links a{
@@ -718,7 +710,6 @@ section{padding:105px 7%;}
   padding:15px;
   margin:14px 0;
   border-radius:17px;
-  #color:var(--light-white);
   color:#ffffff;
   text-decoration:none;
   background:linear-gradient(135deg,rgba(15,23,42,.92),rgba(30,41,59,.90));
@@ -823,9 +814,8 @@ footer{
       <div class="float-chip git"><i class="fa-brands fa-git-alt"></i> Git</div>
       <div class="photo-card">
         <div class="profile-image">
- 		<img src="Profile.jpeg" alt="Sai Chandra Sekhar Reddy">
-		
-	</div>
+          <img src="Profile.jpeg" alt="Sai Chandra Sekhar Reddy">
+        </div>
       </div>
     </div>
   </div>
@@ -880,20 +870,58 @@ footer{
   </div>
 </section>
 
+<!-- PROJECTS SECTION -->
 <section id="projects" class="reveal">
   <div class="section-head"><div class="section-title"><span><i class="fa-solid fa-diagram-project"></i> Projects</span><h2>Selected work</h2></div><div class="section-line"></div></div>
   <div class="project-grid">
-    <div class="project-card"><i class="fa-solid fa-id-card"></i><h3>Portfolio Website</h3><p>Built a responsive portfolio website using HTML, CSS, and JavaScript to showcase projects, technical skills, and learning achievements.</p></div>
-    <div class="project-card"><i class="fa-brands fa-python"></i><h3>Python Automation Scripts</h3><p>Developed Python scripts for solving basic real-world problems and improving task efficiency through automation.</p></div>
 
-    <div class="project-card"><i class="fa-solid fa-temperature-half"></i><h3>Temperature Converter App</h3><p> Built a responsive temperature converter using HTML, CSS, and JavaScript that instantly converts values between Celsius, Fahrenheit, and Kelvin
-    with real-time calculations and user-friendly validation.</p></div>
-<div class="project-card"><i class="fa-solid fa-robot"></i><h3>FAQ Chatbot</h3><p> Developed an interactive FAQ chatbot using JavaScript to provide instant answers to common user queries, improving accessibility and user engagement through a conversational interface.</p></div>
+    <div class="project-card">
+      <i class="fa-solid fa-id-card"></i>
+      <h3>Portfolio Website</h3>
+      <ul class="project-points">
+        <li>Built a fully responsive portfolio using HTML, CSS, and JavaScript.</li>
+        <li>Showcases projects, skills, and achievements with smooth animations.</li>
+        <li>Optimized layout for all screen sizes and modern browsers.</li>
+      </ul>
+      <a href="http://saireddy-sm.github.io/MyPortfolio/" target="_blank" rel="noopener noreferrer" class="view-btn">View Live</a>
+    </div>
+
+        <div class="project-card">
+      <i class="fa-solid fa-file-lines"></i>
+      <h3>ResumeSpark App</h3>
+      <ul class="project-points">
+        <li>ATS-friendly resume builder with real-time preview and customizable templates.</li>
+        <li>PDF export powered by jsPDF and html2canvas.</li>
+        <li>Built using React and Vite for fast, modern performance.</li>
+      </ul>
+      <a href="https://resumespark-app.onrender.com/" target="_blank" rel="noopener noreferrer" class="view-btn">View Live</a>
+    </div>
+
+    <div class="project-card">
+      <i class="fa-solid fa-brain"></i>
+      <h3>ResumePilot</h3>
+      <ul class="project-points">
+        <li>AI-powered resume review tool that analyzes and suggests improvements.</li>
+        <li>Covers ATS scoring, keyword optimization, and formatting guidance.</li>
+        <li>Helps users align resumes with job descriptions effectively.</li>
+      </ul>
+      <a href="https://resumepilot-upz4.onrender.com/" target="_blank" rel="noopener noreferrer" class="view-btn">View Live</a>
+    </div>
+
+    <div class="project-card">
+      <i class="fa-solid fa-temperature-half"></i>
+      <h3>Temperature Converter</h3>
+      <ul class="project-points">
+        <li>Converts values instantly between Celsius, Fahrenheit, and Kelvin.</li>
+        <li>Built with HTML, CSS, and JavaScript with real-time calculations.</li>
+        <li>Includes input validation and a clean, user-friendly interface.</li>
+      </ul>
+      <a href="https://saireddy-sm.github.io/OIBSIP_Web_Development_Internship/task3-temperature-converter/" target="_blank" rel="noopener noreferrer" class="view-btn">View Live</a>
+    </div>
+
+
 
   </div>
- 
-
-
 </section>
 
 <section id="certifications" class="reveal">
@@ -913,11 +941,8 @@ footer{
 <section id="contact" class="reveal">
   <div class="section-head"><div class="section-title"><span><i class="fa-solid fa-paper-plane"></i> Contact</span><h2>Let's connect and collaborate</h2></div><div class="section-line"></div></div>
   <div class="contact-grid">
-
     <div class="card contact-links">
-
       <a href="mailto:saireddy.ch2005@gmail.com"><i class="fa-solid fa-envelope"></i> saireddy.ch2005@gmail.com</a>
-
       <a href="https://www.linkedin.com/in/sai-reddy-0b08b23a0" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn Profile</a>
       <a href="https://github.com/SaiReddy-sm/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub Profile</a>
       <a href="#"><i class="fa-solid fa-location-dot"></i> Guntur, Andhra Pradesh, India</a>
