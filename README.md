@@ -10,7 +10,7 @@ I am a Computer Science Engineering student specializing in Artificial Intellige
 
 Visit my portfolio:
 
-[Portfolio Website](https://my-portfolio-sai-sm-projects.vercel.app/)
+[Portfolio Website](https://saireddy-sm.github.io/MyPortfolio/)
 
 
 
